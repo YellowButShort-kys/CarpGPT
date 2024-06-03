@@ -160,12 +160,12 @@ function love.load()
 
     function client:onStart()
         commands = require("commands")
-        client:RegisterMultipleCommands(commands.main_menu)
+        --client:RegisterMultipleCommands(commands.main_menu)
         --client:RegisterMultipleCommands(commands.chat_selection)
         --client:RegisterMultipleCommands(commands.new_chat)
     end
 
-    --client:Connect(token)
+    client:Connect(token)
     function love.update()
         --love.timer.sleep(3)
         --db_Update()
