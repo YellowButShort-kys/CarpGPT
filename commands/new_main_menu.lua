@@ -232,7 +232,7 @@ function CreateLanguagedMenu(langcode)
         end
         
         
-        require("commands.donation")(langcode, menu, donate)
+        --require("commands.donation")(langcode, menu, donate)
         --[[
         donate.text = LANG[langcode]["$DONATE"]
         donate.callback = function(self, query)

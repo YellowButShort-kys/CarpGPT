@@ -159,7 +159,7 @@ function love.load()
     db_Load()
 
     function client:onStart()
-        print(pcall(require, "commands"))
+        commands = require("commands")
         --client:RegisterMultipleCommands(commands.main_menu)
         --client:RegisterMultipleCommands(commands.chat_selection)
         --client:RegisterMultipleCommands(commands.new_chat)
