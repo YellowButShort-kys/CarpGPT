@@ -41,9 +41,9 @@ local opn = sqlite3.open
 --KOBOLD = 3q7qnr2bMDMUo_5Yww4QHA
 --ANOTHER = 0000000000
 
-local science = require("science")
-ScienceCharUsage = science.New("log_charusage.csv", "%d; %t; %s")
-ScienceTokenUsage = science.New("log_tokenusage.csv", "%d; %t; %s; %s")
+--local science = require("science")
+--ScienceCharUsage = science.New("log_charusage.csv", "%d; %t; %s")
+--ScienceTokenUsage = science.New("log_tokenusage.csv", "%d; %t; %s; %s")
 
 
 
