@@ -505,8 +505,9 @@ function command.callback(user, chat, ...)
     if GetUserFromDB(user.id).chatid == "EMPTY" then
         UpdateUserToDB(user.id, "chatid", tostring(chat.id))
     end
-    
+    print(1)
     chat:SendMessage(LANG[GetUserLang(user.id)]["$INTRODUCTION"], {reply_markup = languaged_menu[GetUserLang(user.id)]})
+    print(2)
 end
 
 function client:onMessage(msg)
@@ -519,7 +520,7 @@ function client:onMessage(msg)
     end
     UpdateUserToDB(user.id, "nextnotification", os.time() + AFK_NOTIFICATION_TIMEOUT)
     
-    love.filesystem.append("usage_message.csv", tostring(os.date("%x")) .. "," .. tostring(os.date("%X")) .. "," .. tostring(msg.from.id) .. "\n")
+    --love.filesystem.append("usage_message.csv", tostring(os.date("%x")) .. "," .. tostring(os.date("%X")) .. "," .. tostring(msg.from.id) .. "\n")
     
     onMessage[GetUserLang(msg.from.id)](client, msg)
 end
