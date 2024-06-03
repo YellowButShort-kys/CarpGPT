@@ -169,7 +169,7 @@ function love.load()
     function love.update()
         --love.timer.sleep(3)
         --db_Update()
-        client:Update()
+        --client:Update()
         --notifications()
         requests.Update()
     end
