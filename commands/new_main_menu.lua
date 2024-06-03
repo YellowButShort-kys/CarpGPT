@@ -505,9 +505,9 @@ function command.callback(user, chat, ...)
     if GetUserFromDB(user.id).chatid == "EMPTY" then
         UpdateUserToDB(user.id, "chatid", tostring(chat.id))
     end
-    print(1)
+    print("WTF")
     chat:SendMessage(LANG[GetUserLang(user.id)]["$INTRODUCTION"], {reply_markup = languaged_menu[GetUserLang(user.id)]})
-    print(2)
+    print("TURBO WTF")
 end
 
 function client:onMessage(msg)
