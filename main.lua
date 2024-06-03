@@ -171,6 +171,6 @@ function love.load()
         --db_Update()
         --client:Update()
         --notifications()
-        requests.Update()
+        --requests.Update()
     end
 end
