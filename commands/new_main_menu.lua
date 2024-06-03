@@ -495,6 +495,7 @@ command.command = "start"
 command.available_for_menu = true
 table.insert(comms, client:NewCommand(command))
 function command.callback(user, chat, ...)
+    print("OMEGA WTF")
     if not GetUserFromDB(user.id) then
         AddUserToDB(user, tostring(chat.id))
         local check, ref = pcall(tonumber, ...)
