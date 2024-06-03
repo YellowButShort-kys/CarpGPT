@@ -203,6 +203,7 @@ end
 
 do
     function instance:SendMessage(chat, text, extra)
+        print("M1")
         local data = {chat_id = type(chat) == "table" and chat.id or chat, text = self.__telelove.__httpfy(text), parse_mode = "HTML"}
         if extra then
             for i, var in pairs(extra) do
@@ -212,11 +213,13 @@ do
                 data[i] = var
             end
         end
+        print("M2")
         
         local r = self.__telelove.__saferequest(
             "https://api.telegram.org/bot"..self.__token.."/sendMessage", 
             {method = "POST", headers = {["Content-Type"] = "application/json"}, data = self.__telelove.json.encode(data)}
         )
+        print("M3")
         return self.__telelove.__class.__message(client.__telelove.json.decode(r).result)
     end
 end
