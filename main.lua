@@ -165,7 +165,7 @@ function love.load()
         --client:RegisterMultipleCommands(commands.new_chat)
     end
 
-    client:Connect(token)
+    --client:Connect(token)
     function love.update()
         --love.timer.sleep(3)
         --db_Update()
