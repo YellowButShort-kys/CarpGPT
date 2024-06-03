@@ -97,6 +97,9 @@ end
 function instance:__ProcessCommands(message)
     if message.text:sub(1, 1) == "/" then
         local i = message.text:find("%s") or 0
+        print(message.text)
+        print(message.text:sub(2, i-1))
+        print(self.__commands_proxy[message.text:sub(2, i-1)])
         if self.__commands_proxy[message.text:sub(2, i-1)] then
             for _, var in ipairs(self.__commands_proxy[message.text:sub(2, i-1)]) do
                 if var.active then
