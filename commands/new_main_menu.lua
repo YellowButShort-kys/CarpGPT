@@ -495,7 +495,6 @@ command.command = "start"
 command.available_for_menu = true
 table.insert(comms, client:NewCommand(command))
 function command.callback(user, chat, ...)
-    print("OMEGA WTF")
     if not GetUserFromDB(user.id) then
         AddUserToDB(user, tostring(chat.id))
         local check, ref = pcall(tonumber, ...)
@@ -506,9 +505,7 @@ function command.callback(user, chat, ...)
     if GetUserFromDB(user.id).chatid == "EMPTY" then
         UpdateUserToDB(user.id, "chatid", tostring(chat.id))
     end
-    print("WTF")
     chat:SendMessage(LANG[GetUserLang(user.id)]["$INTRODUCTION"], {reply_markup = languaged_menu[GetUserLang(user.id)]})
-    print("TURBO WTF")
 end
 
 function client:onMessage(msg)
