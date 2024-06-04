@@ -33,7 +33,7 @@ return function(classes)
                     client.__telelove.__error("Failed while deleting a message! Error code: "..code)
                     return true
                 else
-                    return false
+                    return true
                 end
             end,
             DeleteMessage = function(self)

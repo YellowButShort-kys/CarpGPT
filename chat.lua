@@ -206,7 +206,7 @@ end
 function base:GetResponse(chat, msg, user, callback, errcallback)
     local model = GetUserFromDB(user.id).model
     if model == "horde" then
-        self.task = capybara.Generate(self:GetInstructContents(), callback, errcallback, {chat, self, msg, user}, {"Assistant:", "User:"})
+        self.task = openai.Generate(self:GetInstructContents(), callback, errcallback, {chat, self, msg, user}, {"Assistant:", "User:"})
     elseif model == "openai" then
         self.task = openai.Generate(self:GetInstructContents(), callback, errcallback, {chat, self, msg, user}, {"Assistant:", "User:"})
     elseif model == "capybara" then
