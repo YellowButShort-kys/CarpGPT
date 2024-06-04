@@ -124,7 +124,7 @@ function instance:NewCommand(table)
 end
 function instance:RegisterCommand(command)
     table.insert(self.__commands, command)
-    print(command.command)
+    print("WTF", command.command)
     self.__commands_proxy[command.command] = self.__commands_proxy[command.command] or {}
     table.insert(self.__commands_proxy[command.command], command)
 end
