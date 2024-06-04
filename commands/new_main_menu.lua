@@ -326,7 +326,6 @@ function CreateLanguagedMenu(langcode)
             else
                 UpdateUserToDB(user.id, "tokens", math.max(dbuser.tokens - task.kudos, 0))
             end
-            ScienceTokenUsage(user.id, task.kudos)
             AVG_KUDOS_PRICE = AVG_KUDOS_PRICE + task.kudos
             AVG_KUDOS_PRICE_N = AVG_KUDOS_PRICE_N + 1
         end
