@@ -37,6 +37,10 @@ function translator.RetriveToken()
     end
 end
 function translator.Translate(str, source, target, test)
+    do
+        return str
+    end
+    
     if source == target then
         return str
     end
