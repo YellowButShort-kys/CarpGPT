@@ -124,13 +124,13 @@ function instance:NewCommand(table)
 end
 function instance:RegisterCommand(command)
     table.insert(self.__commands, command)
-    print("WTF", command.command)
     self.__commands_proxy[command.command] = self.__commands_proxy[command.command] or {}
     table.insert(self.__commands_proxy[command.command], command)
 end
 function instance:RegisterMultipleCommands(commands)
     for _, var in ipairs(commands) do
         table.insert(self.__commands, var)
+        print("WTF", var.command)
         self.__commands_proxy[var.command] = self.__commands_proxy[var.command] or {}
         table.insert(self.__commands_proxy[var.command], var)
     end
