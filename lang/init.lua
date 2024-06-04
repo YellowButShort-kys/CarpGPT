@@ -7,6 +7,6 @@ setmetatable(LANG["en"], {__index = function(self, key) return key end})
 setmetatable(LANG["ru"], default)
 setmetatable(LANG["ua"], default)
 
-LANG[1] = LANG["en"]
-LANG[2] = LANG["ru"]
-LANG[3] = LANG["ua"]
+LANG[1] = "en"
+LANG[2] = "ru"
+LANG[3] = "ua"
