@@ -1,3 +1,5 @@
+jit.off()
+
 function love.run()
 	if love.load then love.load(love.parsedGameArguments, love.rawGameArguments) end
 	if love.timer then love.timer.step() end
